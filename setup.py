@@ -15,16 +15,20 @@ setup(
     include_package_data=True,
     entry_points={
         'mkdocs.themes': [
-            'amelia = mkdocs_bootswatch.amelia',
             'cerulean = mkdocs_bootswatch.cerulean',
             'cosmo = mkdocs_bootswatch.cosmo',
             'cyborg = mkdocs_bootswatch.cyborg',
+            'darkly = mkdocs_bootswatch.darkly',
             'flatly = mkdocs_bootswatch.flatly',
             'journal = mkdocs_bootswatch.journal',
+            'lumen = mkdocs_bootswatch.lumen',
+            'paper = mkdocs_bootswatch.paper',
             'readable = mkdocs_bootswatch.readable',
+            'sandstone = mkdocs_bootswatch.sandstone',
             'simplex = mkdocs_bootswatch.simplex',
             'slate = mkdocs_bootswatch.slate',
             'spacelab = mkdocs_bootswatch.spacelab',
+            'superhero = mkdocs_bootswatch.superhero',
             'united = mkdocs_bootswatch.united',
             'yeti = mkdocs_bootswatch.yeti',
         ]
