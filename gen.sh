@@ -23,11 +23,11 @@ for theme in "${bootswatch_themes[@]}"; do
 done
 rm -rf "$mkdocs_dir"
 cd ..
-git add "$themes_dir"
+git add -A "$themes_dir"
 git commit -m 'Update themes.'
 git checkout tweaks
 git rebase master
 git checkout master
 git apply <(git diff --binary master..tweaks)
-git add "$themes_dir"
+git add -A "$themes_dir"
 git commit -m 'Tweak updated themes.'
