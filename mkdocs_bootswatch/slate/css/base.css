@@ -1,5 +1,8 @@
 body {
     padding-top: 70px;
+    background: url(../img/grid.png) repeat-x;
+    background-attachment: fixed;
+    background-color: #f8f8f8;
 }
 
 body > div.container {
@@ -27,9 +30,14 @@ div.col-md-9 img {
     display: inline;
     padding: 4px;
     line-height: 1.428571429;
-    border: 1px solid;
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 4px;
     margin: 20px auto 30px auto;
+}
+
+h1, h2, h3 {
+    color: #444;
 }
 
 /*
@@ -70,24 +78,53 @@ body.clicky :target::before {
     }
 }
 
+h1 {
+    font-weight: 400;
+    font-size: 42px;
+}
+
+h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+hr {
+    border-top: 1px solid #aaa;
+}
+
+pre, .rst-content tt {
+    max-width: 100%;
+    background: #fff;
+    border: solid 1px #e1e4e5;
+    color: #333;
+    overflow-x: auto;
+}
+
 code.code-large, .rst-content tt.code-large {
     font-size: 90%;
 }
 
 code {
     padding: 2px 5px;
-    background: #1c1e22;
-    border: solid 1px #0c0d0e;
-    color: #c8c8c8;
+    background: #fff;
+    border: solid 1px #e1e4e5;
+    color: #333;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 pre code {
     background: transparent;
     border: none;
+    white-space: pre;
+    word-wrap: normal;
 }
 
 a code {
-    color: #fff;
+    color: #2FA4E7;
+}
+
+a:hover code, a:focus code {
+    color: #157AB5;
 }
 
 code, kbd, pre, samp  {
@@ -237,6 +274,7 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
     text-align: left;
 }
 
+
 .dropdown-submenu {
     position: relative;
 }
@@ -264,7 +302,7 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
     border-color: transparent;
     border-style: solid;
     border-width: 5px 0 5px 5px;
-    border-left-color: #999999;
+    border-left-color: #ccc;
     margin-top: 5px;
     margin-right: -10px;
 }
