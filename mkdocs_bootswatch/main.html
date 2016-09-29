@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{%- block content %}
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+$(document).ready(function() {
+    $('.title').append($('h1'))
+    $('h2').before('<hr/>')
+    MathJax.Hub.Config({'tex2jax': {inlineMath: [['$', '$']]}})
+})
+</script>
+
+<style>
+    h1 { text-align: center }
+    h1, h2 { font-weight: 500 }
+    footer { display: none }
+</style>
+
+{%- if page.toc.items and page.toc.items[0].children %}
+<div class="col-md-3">
+    <div class="visible-xs visible-sm title"></div>
+    <div class="bs-sidebar hidden-print affix well" role="complementary">
+        <ul class="nav bs-sidenav">
+        {%- for toc_item in page.toc.items[0].children %}
+            <li><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+            {%- for toc_item in toc_item.children %}
+            <li style="padding-left: 0.15cm; font-size: smaller">
+                <a href="{{ toc_item.url }}">{{ toc_item.title }}</a>
+            </li>
+            {%- endfor %}
+        {%- endfor %}
+        </ul>
+    </div>
+</div>
+{%- endif %}
+
+<div class="col-md-9" role="main">
+    <div class="visible-md visible-lg title"></div>
+    {% include "content.html" %}
+</div>
+{%- endblock %}
