@@ -25,9 +25,7 @@ rm -rf "$mkdocs_dir"
 cd ..
 git add -A "$themes_dir"
 git commit -m 'Update themes.'
-git checkout tweaks
-git rebase master
-git checkout master
-git apply <(git diff --binary master..tweaks)
-git add -A "$themes_dir"
-git commit -m 'Tweak updated themes.'
+git tag -f new-update
+git cherry-pick update..tweaks
+git tag -f update new-update
+git branch -f tweaks
