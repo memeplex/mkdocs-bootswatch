@@ -32,10 +32,18 @@ $(document).ready(function() {
         </ul>
     </div>
 </div>
-{%- endif %}
-
 <div class="col-md-9" role="main">
     <div class="visible-md visible-lg title"></div>
     {% include "content.html" %}
 </div>
+
+{%- else %}
+
+<div class="col-md-1"></div>
+<div class="col-md-10" role="main">
+    <div class="visible-md visible-lg title"></div>
+    {% include "content.html" %}
+</div>
+
+{%- endif %}
 {%- endblock %}
