@@ -2,29 +2,29 @@ body {
     padding-top: 70px;
 }
 
-body > div.container {
+body > .container {
     min-height: 400px;
 }
 
-ul.nav li.main {
+ul.nav .main {
     font-weight: bold;
 }
 
-div.col-md-3 {
+.col-md-3 {
     padding-left: 0;
 }
 
-div.col-md-9 {
+.col-md-9 {
     padding-bottom: 100px;
 }
 
-div.source-links {
+.source-links {
     float: right;
 }
 
-div.col-md-9 img {
+.col-md-9 img {
     max-width: 100%;
-    display: inline;
+    display: inline-block;
     padding: 4px;
     line-height: 1.428571429;
     border: 1px solid;
@@ -52,7 +52,7 @@ div.col-md-9 img {
     animation: 0s 1s forwards collapse-anchor-padding-1;
 }
 
-body.clicky :target::before {
+.clicky :target::before {
   animation-name: collapse-anchor-padding-2;
 }
 
@@ -69,6 +69,27 @@ body.clicky :target::before {
         height: 0;
     }
 }
+
+h1 {
+    font-weight: 400;
+    font-size: 42px;
+}
+
+h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+hr {
+    border-top: 1px solid;
+}
+
+pre, .rst-content tt {
+    max-width: 100%;
+    border: solid 1px;
+    overflow-x: auto;
+}
+
+
 
 code.code-large, .rst-content tt.code-large {
     font-size: 90%;
@@ -88,6 +109,8 @@ pre code {
     border: none;
     white-space: pre;
     word-wrap: normal;
+    font-family: monospace,serif;
+    font-size: 12px;
 }
 
 a code {
@@ -96,11 +119,6 @@ a code {
 
 a:hover code, a:focus code {
     color: #0059b3;
-}
-
-code, kbd, pre, samp  {
-    font-family: monospace,serif;
-    font-size: 12px !important;
 }
 
 footer {
@@ -122,11 +140,11 @@ footer {
  */
 
 /* By default it's not affixed in mobile views, so undo that */
-.bs-sidebar.affix {
+.bs-sidebar.affix { /* csslint allow: adjoining-classes */
     position: static;
 }
 
-.bs-sidebar.well {
+.bs-sidebar.well { /* csslint allow: adjoining-classes */
     padding: 0;
     max-height: 90%;
     overflow-y: auto;
@@ -176,27 +194,27 @@ footer {
         display: block;
     }
     /* Widen the fixed sidebar */
-    .bs-sidebar.affix,
-    .bs-sidebar.affix-bottom {
+    .bs-sidebar.affix, /* csslint allow: adjoining-classes */
+    .bs-sidebar.affix-bottom { /* csslint allow: adjoining-classes */
         width: 213px;
     }
-    .bs-sidebar.affix {
+    .bs-sidebar.affix { /* csslint allow: adjoining-classes */
         position: fixed; /* Undo the static from mobile first approach */
         top: 80px;
     }
-    .bs-sidebar.affix-bottom {
+    .bs-sidebar.affix-bottom { /* csslint allow: adjoining-classes */
         position: absolute; /* Undo the static from mobile first approach */
     }
-    .bs-sidebar.affix-bottom .bs-sidenav,
-    .bs-sidebar.affix .bs-sidenav {
+    .bs-sidebar.affix-bottom .bs-sidenav, /* csslint allow: adjoining-classes */
+    .bs-sidebar.affix .bs-sidenav { /* csslint allow: adjoining-classes */
         margin-top: 0;
         margin-bottom: 0;
     }
 }
 @media (min-width: 1200px) {
     /* Widen the fixed sidebar again */
-    .bs-sidebar.affix-bottom,
-    .bs-sidebar.affix {
+    .bs-sidebar.affix-bottom, /* csslint allow: adjoining-classes */
+    .bs-sidebar.affix { /* csslint allow: adjoining-classes */
         width: 263px;
     }
 }
@@ -222,19 +240,19 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
     text-align: left;
 }
 
-.admonition.note {
+.admonition.note { /* csslint allow: adjoining-classes */
     color: #3a87ad;
     background-color: #d9edf7;
     border-color: #bce8f1;
 }
 
-.admonition.warning {
+.admonition.warning { /* csslint allow: adjoining-classes */
     color: #c09853;
     background-color: #fcf8e3;
     border-color: #fbeed5;
 }
 
-.admonition.danger {
+.admonition.danger { /* csslint allow: adjoining-classes */
     color: #b94a48;
     background-color: #f2dede;
     border-color: #eed3d7;
@@ -282,11 +300,11 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
     border-left-color: #404040;
 }
 
-.dropdown-submenu.pull-left {
+.dropdown-submenu.pull-left { /* csslint allow: adjoining-classes */
     float: none;
 }
 
-.dropdown-submenu.pull-left>.dropdown-menu {
+.dropdown-submenu.pull-left>.dropdown-menu { /* csslint allow: adjoining-classes */
     left: -100%;
     margin-left: 10px;
     -webkit-border-radius: 6px 0 6px 6px;
